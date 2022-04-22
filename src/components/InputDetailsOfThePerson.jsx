@@ -1,9 +1,9 @@
 import React, { useEffect, useState,useRef } from 'react';
 import {db} from './../database/fireBase'
 import {collection, addDoc, Timestamp} from 'firebase/firestore'
-import Location from './Location';
 import styles from './../styles/inputDetailsOfThePerson.css'
 
+// This should be restricted/ hidden in .env but I have left it here because geolocation API now requires billing so one can be able to access
 const apiKey = 'AIzaSyA9WeezfSNHFGp7Wg_uGCGQMTy4coxbuZM'
 
 const mapApiJs = 'https://maps.googleapis.com/maps/api/js';
@@ -23,7 +23,6 @@ function loadAsyncScript(src) {
   }
   
   const extractAddress = (place) => {
-  
     const address = {
       city: "",
       state: "",
@@ -70,16 +69,13 @@ function loadAsyncScript(src) {
 
 function InputDetailsOfThePesron(props) {
 
-    const [currentLocation, setCurrentLocation] = useState()
     const [personName, setPersonName] = useState()
     const [dateOfContact, setDateOfContact] = useState()
+    const [address, setAddress] = useState({});
     const [locationOfContact, setLocationOfContact] = useState()
 
     const searchInput = useRef(null);
-  const [address, setAddress] = useState({});
 
-
-  // init gmap script
   const initMapScript = () => {
     if(window.google) {
       return Promise.resolve();
@@ -143,7 +139,6 @@ function InputDetailsOfThePesron(props) {
             created: Timestamp.now()
           })
         } catch (err) {
-            console.log('addresss is',address)
           alert(err)
         }
       }

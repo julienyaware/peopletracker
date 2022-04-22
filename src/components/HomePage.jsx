@@ -6,8 +6,8 @@ import styles from "./../styles/homePage.css"
 function HomePage(props) {
     return (
         <div className='home'>
-           <InputDetailsOfThePerson/>
-           <ListOfPersonsInContact/>
+            <InputDetailsOfThePerson />
+            <ListOfPersonsInContact />
         </div>
     );
 }
