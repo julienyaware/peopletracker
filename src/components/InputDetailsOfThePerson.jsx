@@ -4,7 +4,7 @@ import {collection, addDoc, Timestamp} from 'firebase/firestore'
 import Location from './Location';
 import styles from './../styles/inputDetailsOfThePerson.css'
 
-const apiKey = "YOUR_API_KEY"
+const apiKey = 'AIzaSyA9WeezfSNHFGp7Wg_uGCGQMTy4coxbuZM'
 
 const mapApiJs = 'https://maps.googleapis.com/maps/api/js';
 const geocodeJson = 'https://maps.googleapis.com/maps/api/geocode/json';
