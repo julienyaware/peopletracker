@@ -12,6 +12,7 @@ function ListOfPersonsInContact(props) {
   const [filteredNames, setFilteredNames] = useState([])
 
   useEffect(() => {
+    // get real time data frome firestore
     const q = query(collection(db, 'personsOfContact'), orderBy('created', 'desc'))
     onSnapshot(q, (querySnapshot) => {
       setListOfPeople(querySnapshot.docs.map(doc => ({
@@ -22,7 +23,7 @@ function ListOfPersonsInContact(props) {
   }, [])
 
 
-//Filters list of names by name search
+  //Filters list of names by name search
   const filterPeople = (e) => {
     const searchedWord = e.target.value;
 
