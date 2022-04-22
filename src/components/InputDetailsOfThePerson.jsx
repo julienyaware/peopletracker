@@ -21,6 +21,8 @@ function loadAsyncScript(src) {
       document.head.appendChild(script);
     })
   }
+
+  //Extract address from the json returned from API
   
   const extractAddress = (place) => {
     const address = {
@@ -66,7 +68,7 @@ function loadAsyncScript(src) {
   }
   
 
-
+// Form that the user fills in
 function InputDetailsOfThePesron(props) {
 
     const [personName, setPersonName] = useState()
