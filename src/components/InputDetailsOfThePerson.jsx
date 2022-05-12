@@ -4,7 +4,7 @@ import {collection, addDoc, Timestamp} from 'firebase/firestore'
 import styles from './../styles/inputDetailsOfThePerson.css'
 
 // This should be restricted/ hidden in .env but I have left it here because geolocation API now requires billing so one can be able to access
-const apiKey = 'AIzaSyA9WeezfSNHFGp7Wg_uGCGQMTy4coxbuZM'
+const apiKey = 'Insert your API key'
 
 const mapApiJs = 'https://maps.googleapis.com/maps/api/js';
 const geocodeJson = 'https://maps.googleapis.com/maps/api/geocode/json';
